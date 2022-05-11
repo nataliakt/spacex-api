@@ -1,1 +1,1 @@
-import './configs/express';
+import './configs/server';
