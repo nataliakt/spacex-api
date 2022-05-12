@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import lauchesRoutes from '../routes/launches';
+import launchesRoutes from '../routes/launches';
+import homeRoutes from '../routes/home';
 
 const PORT = process.env.PORT || 4000;
 
@@ -13,7 +14,9 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/launches', lauchesRoutes);
+app.use('/launches', launchesRoutes);
+app.use('/home', homeRoutes);
+
 app.use('/', (req, res) => {
   res.status(200).send('SpaceX API is up and running!');
 });

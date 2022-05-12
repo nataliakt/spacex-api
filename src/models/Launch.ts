@@ -1,13 +1,10 @@
 interface Launch {
   id: number;
-  number: number;
   name: string;
   date: string;
-  links: LaunchLinks;
-  success: boolean;
-  upcoming: boolean;
+  hour: string;
+  success: boolean | null;
+  patch: string | null;
 }
 
-interface LaunchLinks {
-  webcast: string;
-}
+export default Launch;
